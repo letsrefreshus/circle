@@ -8,13 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		E24CD5431C7571270025D4FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24CD5421C7571270025D4FD /* AppDelegate.swift */; };
-		E24CD5451C7571270025D4FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24CD5441C7571270025D4FD /* ViewController.swift */; };
+		E24CD5451C7571270025D4FD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24CD5441C7571270025D4FD /* HomeViewController.swift */; };
 		E24CD5481C7571270025D4FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E24CD5461C7571270025D4FD /* Main.storyboard */; };
 		E24CD54B1C7571270025D4FD /* circle.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E24CD5491C7571270025D4FD /* circle.xcdatamodeld */; };
 		E24CD54D1C7571270025D4FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E24CD54C1C7571270025D4FD /* Assets.xcassets */; };
 		E24CD5501C7571270025D4FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E24CD54E1C7571270025D4FD /* LaunchScreen.storyboard */; };
 		E24CD55B1C7571270025D4FD /* circleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24CD55A1C7571270025D4FD /* circleTests.swift */; };
 		E24CD5661C7571270025D4FD /* circleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24CD5651C7571270025D4FD /* circleUITests.swift */; };
+		E24CD5771C75721A0025D4FD /* MatItemViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24CD5751C75721A0025D4FD /* MatItemViewCell.swift */; };
+		E24CD5781C75721A0025D4FD /* MatItemViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E24CD5761C75721A0025D4FD /* MatItemViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +39,7 @@
 /* Begin PBXFileReference section */
 		E24CD53F1C7571270025D4FD /* circle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = circle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E24CD5421C7571270025D4FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E24CD5441C7571270025D4FD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E24CD5441C7571270025D4FD /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		E24CD5471C7571270025D4FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E24CD54A1C7571270025D4FD /* circle.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = circle.xcdatamodel; sourceTree = "<group>"; };
 		E24CD54C1C7571270025D4FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +51,8 @@
 		E24CD5611C7571270025D4FD /* circleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = circleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E24CD5651C7571270025D4FD /* circleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = circleUITests.swift; sourceTree = "<group>"; };
 		E24CD5671C7571270025D4FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E24CD5751C75721A0025D4FD /* MatItemViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatItemViewCell.swift; sourceTree = "<group>"; };
+		E24CD5761C75721A0025D4FD /* MatItemViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MatItemViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +103,9 @@
 		E24CD5411C7571270025D4FD /* circle */ = {
 			isa = PBXGroup;
 			children = (
+				E24CD5741C7571E70025D4FD /* MatItemViewCell */,
 				E24CD5421C7571270025D4FD /* AppDelegate.swift */,
-				E24CD5441C7571270025D4FD /* ViewController.swift */,
+				E24CD5441C7571270025D4FD /* HomeViewController.swift */,
 				E24CD5461C7571270025D4FD /* Main.storyboard */,
 				E24CD54C1C7571270025D4FD /* Assets.xcassets */,
 				E24CD54E1C7571270025D4FD /* LaunchScreen.storyboard */,
@@ -126,6 +131,15 @@
 				E24CD5671C7571270025D4FD /* Info.plist */,
 			);
 			path = circleUITests;
+			sourceTree = "<group>";
+		};
+		E24CD5741C7571E70025D4FD /* MatItemViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				E24CD5751C75721A0025D4FD /* MatItemViewCell.swift */,
+				E24CD5761C75721A0025D4FD /* MatItemViewCell.xib */,
+			);
+			name = MatItemViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +247,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E24CD5501C7571270025D4FD /* LaunchScreen.storyboard in Resources */,
+				E24CD5781C75721A0025D4FD /* MatItemViewCell.xib in Resources */,
 				E24CD54D1C7571270025D4FD /* Assets.xcassets in Resources */,
 				E24CD5481C7571270025D4FD /* Main.storyboard in Resources */,
 			);
@@ -259,7 +274,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E24CD5451C7571270025D4FD /* ViewController.swift in Sources */,
+				E24CD5451C7571270025D4FD /* HomeViewController.swift in Sources */,
+				E24CD5771C75721A0025D4FD /* MatItemViewCell.swift in Sources */,
 				E24CD54B1C7571270025D4FD /* circle.xcdatamodeld in Sources */,
 				E24CD5431C7571270025D4FD /* AppDelegate.swift in Sources */,
 			);
@@ -407,6 +423,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = us.refresh.circle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -418,6 +435,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = us.refresh.circle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
