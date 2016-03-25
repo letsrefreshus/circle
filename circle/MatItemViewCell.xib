@@ -4,28 +4,82 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Ubuntu-L.ttf">
+            <string>Ubuntu-Light</string>
+            <string>Ubuntu-Light</string>
+            <string>Ubuntu-Light</string>
+        </mutableArray>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="matDescriptorCell" rowHeight="86" id="aog-n5-Qii" customClass="MatItemViewCell" customModule="circle" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="matDescriptorCell" rowHeight="-77" id="aog-n5-Qii" customClass="MatItemViewCell" customModule="circle" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aog-n5-Qii" id="tGe-6A-kPG">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="99.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="180" height="179.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lJd-wW-67g">
-                        <rect key="frame" x="222" y="39" width="42" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gW5-jd-elp" customClass="RadialChart" customModule="circle" customModuleProvider="target">
+                        <rect key="frame" x="35" y="33" width="110" height="110"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dsA-ID-HXM">
+                                <rect key="frame" x="30" y="30" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="BBu-Jw-5nb"/>
+                                    <constraint firstAttribute="height" constant="50" id="sgW-kB-zEq"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="110" id="Hb8-Xt-WEy"/>
+                            <constraint firstItem="dsA-ID-HXM" firstAttribute="centerY" secondItem="gW5-jd-elp" secondAttribute="centerY" id="WbL-6s-s1Q"/>
+                            <constraint firstAttribute="height" constant="110" id="n3K-at-cik"/>
+                            <constraint firstItem="dsA-ID-HXM" firstAttribute="centerX" secondItem="gW5-jd-elp" secondAttribute="centerX" id="tTT-xt-QWI"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Skr-vL-Ily">
+                        <rect key="frame" x="33" y="149" width="48" height="22"/>
+                        <fontDescription key="fontDescription" name="Ubuntu-Light" family="Ubuntu" pointSize="19"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50oz" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ur-X1-S60">
+                        <rect key="frame" x="87" y="153" width="58" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="58" id="qFe-5P-zps"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Ubuntu-Light" family="Ubuntu" pointSize="14"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xbx-Ez-Fr8">
+                        <rect key="frame" x="8" y="8" width="136" height="21"/>
+                        <fontDescription key="fontDescription" name="Ubuntu-Light" family="Ubuntu" pointSize="15"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="gW5-jd-elp" firstAttribute="centerY" secondItem="tGe-6A-kPG" secondAttribute="centerY" constant="-1.75" id="CpS-GM-fyc"/>
+                    <constraint firstItem="Skr-vL-Ily" firstAttribute="top" secondItem="gW5-jd-elp" secondAttribute="bottom" constant="6" id="F2I-rB-aIR"/>
+                    <constraint firstItem="gW5-jd-elp" firstAttribute="centerX" secondItem="tGe-6A-kPG" secondAttribute="centerX" id="HI8-SH-4Rd"/>
+                    <constraint firstItem="6ur-X1-S60" firstAttribute="top" secondItem="gW5-jd-elp" secondAttribute="bottom" constant="10" id="SkX-C5-nKW"/>
+                    <constraint firstItem="Skr-vL-Ily" firstAttribute="centerX" secondItem="tGe-6A-kPG" secondAttribute="centerX" constant="-33" id="T6o-Qz-iku"/>
+                    <constraint firstItem="6ur-X1-S60" firstAttribute="leading" secondItem="Skr-vL-Ily" secondAttribute="trailing" constant="6" id="kbh-uu-aSl"/>
+                </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
             <connections>
-                <outlet property="percentageLabel" destination="lJd-wW-67g" id="jNh-XR-U24"/>
+                <outlet property="itemIcon" destination="dsA-ID-HXM" id="lFR-AO-7BA"/>
+                <outlet property="itemName" destination="Xbx-Ez-Fr8" id="mWz-WL-8UG"/>
+                <outlet property="percentageLabel" destination="Skr-vL-Ily" id="Bi2-Xp-0la"/>
+                <outlet property="radialChart" destination="gW5-jd-elp" id="VPS-fs-EeR"/>
+                <outlet property="weightLabel" destination="6ur-X1-S60" id="aaB-pd-oxa"/>
             </connections>
-            <point key="canvasLocation" x="312" y="216"/>
+            <point key="canvasLocation" x="318" y="134"/>
         </tableViewCell>
     </objects>
 </document>
