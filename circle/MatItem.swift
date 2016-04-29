@@ -11,9 +11,12 @@ import UIKit
 class MatItem: NSObject {
     var itemId = NSNumber()
     var itemName =  String()
-    var itemWeighedDate = NSDate()
+    var itemWeighedDate = String()
     var itemMaxWeight = NSNumber()
     var itemWeight = NSNumber()
+    var containerWeight = NSNumber()
+    var numUnits = NSNumber()
+    var units = String()
     var itemWeightPercentage:NSNumber {
         get {
             if(itemMaxWeight == 0) {

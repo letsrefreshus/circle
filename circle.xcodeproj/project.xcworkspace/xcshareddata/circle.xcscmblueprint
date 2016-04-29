@@ -5,15 +5,19 @@
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
     "3281BD5868D6F2617A11159B55C406EF93A9994E" : 0,
+    "97603AB76853703C83BD018424E6DBA7AE1FC705" : 0,
     "9E111BA7F90C491BFB834053630F44D5F3C35997" : 0,
     "0AC957E24C57C07FD1DA2B77F10C11BAA1F9B4BE" : 0,
+    "DD20A1A48C66B5213E0FEBB87A95EF51D6C6F3E8" : 0,
     "67620B5EFA902936DF04070AF595B76AB0333747" : 0
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "0ADDD9BE-367B-46BD-BD4C-C27E7B54CEC0",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
     "3281BD5868D6F2617A11159B55C406EF93A9994E" : "circle\/UICountingLabel\/",
+    "97603AB76853703C83BD018424E6DBA7AE1FC705" : "..\/..\/clarifai-ios-starter",
     "9E111BA7F90C491BFB834053630F44D5F3C35997" : "circle\/Frameworks\/nuwe-charts-ios\/",
     "0AC957E24C57C07FD1DA2B77F10C11BAA1F9B4BE" : "circle\/",
+    "DD20A1A48C66B5213E0FEBB87A95EF51D6C6F3E8" : "circle\/AFNetworking\/",
     "67620B5EFA902936DF04070AF595B76AB0333747" : "circle\/Alamofire\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "circle",
@@ -36,9 +40,19 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "67620B5EFA902936DF04070AF595B76AB0333747"
     },
     {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Clarifai\/clarifai-ios-starter.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "97603AB76853703C83BD018424E6DBA7AE1FC705"
+    },
+    {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/nuwehq\/nuwe-charts-ios.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9E111BA7F90C491BFB834053630F44D5F3C35997"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/AFNetworking\/AFNetworking.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "DD20A1A48C66B5213E0FEBB87A95EF51D6C6F3E8"
     }
   ]
 }

@@ -14,7 +14,7 @@ class HomeViewController: UICollectionViewController,UICollectionViewDelegateFlo
     static let CELL_INSET = CGFloat(5)
 
     var listItems = Array<Array<MatItem>>()
-    let serverCommunicator = ServerCommunication()
+    let serverCommunicator = ServerCommunication.sharedInstance
     let refreshControl = UIRefreshControl()
     
     override func viewDidLoad() {
@@ -33,11 +33,15 @@ class HomeViewController: UICollectionViewController,UICollectionViewDelegateFlo
         refreshControl.addTarget(self, action: #selector(HomeViewController.refresh(_:)), forControlEvents: .ValueChanged)
         collectionView?.addSubview(refreshControl)
         
+//        let listButton = UIBarButtonItem(image: UIImage(named: "ListIcon"), style: .Plain, target: self, action: #selector(HomeViewController.onListButtonPressed(_:)))
+        let listButton = UIBarButtonItem(barButtonSystemItem: .Bookmarks, target: self, action: #selector(HomeViewController.onListButtonPressed(_:)))
+        navigationItem.rightBarButtonItem = listButton
+        
         getScaleDataFromServer()
     }
     
     func getScaleDataFromServer() {
-        serverCommunicator.postDataForServer({
+        serverCommunicator.postDataToServer(ServerCommunication.ParametersForOperation.MatFetchData,headers:ServerCommunication.HeadersForOperation.MatFetchData, completion:{
             (responseData:NSData) -> Void in
             do {
                 let anyObj: AnyObject? = try NSJSONSerialization.JSONObjectWithData(responseData, options:.MutableContainers)
@@ -47,15 +51,20 @@ class HomeViewController: UICollectionViewController,UICollectionViewDelegateFlo
                 for item in anyObj as! Array<AnyObject> {
                     let matItem = MatItem()
                     for (itemType, itemName) in item as! NSMutableDictionary {
-                        print(itemType)
                         if(itemType as! String == "stable_weight") {
                             matItem.itemWeight = itemName as! NSNumber
                         } else if(itemType as! String == "id") {
                             matItem.itemId = itemName as! NSNumber
                         } else if(itemType as! String == "item_name") {
                             matItem.itemName = itemName as! String
-//                        } else if(itemType as! String == "stable_weight_modified") {
-//                            matItem.itemWeighedDate = NSDate(timeIntervalSince1970: Int(itemName))
+                        } else if(itemType as! String == "stable_weight_modified") {
+                            matItem.itemWeighedDate = (itemName as! String)
+                        } else if(itemType as! String == "container_weight") {
+                            matItem.containerWeight = itemName as! NSNumber
+                        } else if(itemType as! String == "num_units") {
+                            matItem.numUnits = Float(itemName as! String)!
+                        } else if(itemType as! String == "units") {
+                            matItem.units = itemName as! String
                         } else if(itemType as! String == "max_weight") {
                             matItem.itemMaxWeight = itemName as! NSNumber
                         }
@@ -83,6 +92,11 @@ class HomeViewController: UICollectionViewController,UICollectionViewDelegateFlo
         getScaleDataFromServer()
     }
     
+    func onListButtonPressed(sender:AnyObject) {
+        let listStoryBoard =  UIStoryboard(name: "ListTableStoryboard", bundle: nil)
+        let vc = listStoryBoard.instantiateViewControllerWithIdentifier("ListTableViewController") as! ListTableViewController
+        navigationController?.pushViewController(vc, animated: true)
+    }
     
     //MARK:- Collection View
     override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
@@ -112,8 +126,9 @@ class HomeViewController: UICollectionViewController,UICollectionViewDelegateFlo
     }
         
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        let vc = MatDetailedViewController()
-        self.presentViewController(vc, animated: true, completion: nil)
+        
+//        self.navigationController?.pushViewController(vc, animated: true)
+//        self.presentViewController(vc, animated: true, completion: nil)
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInterimSpacingForSectionAtIndex section: Int) -> CGFloat {
