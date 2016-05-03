@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E2139BCA1CD8273000A9D43B /* CheckBoxButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2139BC91CD8273000A9D43B /* CheckBoxButton.swift */; };
 		E213F8881C81085400C44A71 /* MatItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E213F8871C81085400C44A71 /* MatItem.swift */; };
 		E22860A61CC97726009D3F80 /* ListTableStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E22860A51CC97726009D3F80 /* ListTableStoryboard.storyboard */; };
 		E22860AA1CC9A2F3009D3F80 /* DictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22860A91CC9A2F3009D3F80 /* DictionaryExtension.swift */; };
@@ -127,6 +128,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E2139BC91CD8273000A9D43B /* CheckBoxButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckBoxButton.swift; sourceTree = "<group>"; };
 		E213F8871C81085400C44A71 /* MatItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatItem.swift; sourceTree = "<group>"; };
 		E22860A51CC97726009D3F80 /* ListTableStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ListTableStoryboard.storyboard; sourceTree = "<group>"; };
 		E22860A91CC9A2F3009D3F80 /* DictionaryExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryExtension.swift; sourceTree = "<group>"; };
@@ -339,6 +341,7 @@
 				E2D47FFE1CC970F3009A7DC8 /* AddItemProtocol.swift */,
 				E22860A51CC97726009D3F80 /* ListTableStoryboard.storyboard */,
 				E22860AC1CCABEDE009D3F80 /* List.swift */,
+				E2139BC91CD8273000A9D43B /* CheckBoxButton.swift */,
 			);
 			name = List;
 			sourceTree = "<group>";
@@ -555,6 +558,7 @@
 				E29971901C75A14E00267230 /* RadialChart.swift in Sources */,
 				E24CD54B1C7571270025D4FD /* circle.xcdatamodeld in Sources */,
 				E24CD5431C7571270025D4FD /* AppDelegate.swift in Sources */,
+				E2139BCA1CD8273000A9D43B /* CheckBoxButton.swift in Sources */,
 				E2D47FFF1CC970F3009A7DC8 /* ListTableViewCell.swift in Sources */,
 				E283C1F11CBF2D30000475DE /* ScanditCommunicator.swift in Sources */,
 				E22860AD1CCABEDE009D3F80 /* List.swift in Sources */,

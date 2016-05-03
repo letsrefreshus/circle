@@ -33,8 +33,11 @@ class HomeViewController: UICollectionViewController,UICollectionViewDelegateFlo
         refreshControl.addTarget(self, action: #selector(HomeViewController.refresh(_:)), forControlEvents: .ValueChanged)
         collectionView?.addSubview(refreshControl)
         
-//        let listButton = UIBarButtonItem(image: UIImage(named: "ListIcon"), style: .Plain, target: self, action: #selector(HomeViewController.onListButtonPressed(_:)))
-        let listButton = UIBarButtonItem(barButtonSystemItem: .Bookmarks, target: self, action: #selector(HomeViewController.onListButtonPressed(_:)))
+        var listIconImage = UIImage(named: "ListIcon")
+        listIconImage = listIconImage?.imageWithRenderingMode(.AlwaysOriginal)
+        let listButton = UIBarButtonItem(image: listIconImage, style: .Plain, target: self, action: #selector(HomeViewController.onListButtonPressed(_:)))
+        navigationController?.navigationBar.barTintColor = .None
+//        let listButton = UIBarButtonItem(barButtonSystemItem: .Bookmarks, target: self, action: #selector(HomeViewController.onListButtonPressed(_:)))
         navigationItem.rightBarButtonItem = listButton
         
         getScaleDataFromServer()
