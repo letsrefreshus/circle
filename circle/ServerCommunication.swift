@@ -23,6 +23,7 @@ class ServerCommunication: NSObject {
         case ListItemsFetchData
         case ListAddItem
         case ListDeleteItem
+        case ListEditItem
     }
     
     enum HeadersForOperation{
@@ -32,6 +33,7 @@ class ServerCommunication: NSObject {
         case ListItemsFetchData
         case ListAddItem
         case ListDeleteItem
+        case ListEditItem
     }
     
     
@@ -81,6 +83,8 @@ class ServerCommunication: NSObject {
         case .ListDeleteItem:
             parameters =  ["operation":"DELETE", "delete_type":"list"]
             break
+        case .ListEditItem:
+            parameters = ["operation": "UPDATE", "update_type": "list"]
         }
         return parameters
     }
@@ -94,11 +98,4 @@ class ServerCommunication: NSObject {
         }
         return headers
     }
-    
-//    func postDataForServer(completion:(responseData:NSData)->Void) {
-//        Alamofire.request(.POST, serverURL,parameters: ["operation":"QUERY", "query_type":"scale"], encoding:Alamofire.ParameterEncoding.JSON, headers:["content-type":"application/json"]).responseJSON() {
-//            response in
-//            completion(responseData: response.data!)
-//        }
-//    }["operation":"QUERY", "query_type":"scale"]
 }

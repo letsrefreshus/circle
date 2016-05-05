@@ -33,9 +33,10 @@
 		E283C1F11CBF2D30000475DE /* ScanditCommunicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E283C1F01CBF2D30000475DE /* ScanditCommunicator.swift */; };
 		E29971901C75A14E00267230 /* RadialChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = E299718F1C75A14E00267230 /* RadialChart.swift */; };
 		E299719D1C76C6E100267230 /* ServerCommunication.swift in Sources */ = {isa = PBXBuildFile; fileRef = E299719C1C76C6E100267230 /* ServerCommunication.swift */; };
+		E2A131111CDA8EA700912B70 /* ListProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A131101CDA8EA700912B70 /* ListProtocol.swift */; };
 		E2D47FFF1CC970F3009A7DC8 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D47FFC1CC970F3009A7DC8 /* ListTableViewCell.swift */; };
 		E2D480001CC970F3009A7DC8 /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2D47FFD1CC970F3009A7DC8 /* ListTableViewCell.xib */; };
-		E2D480011CC970F3009A7DC8 /* AddItemProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D47FFE1CC970F3009A7DC8 /* AddItemProtocol.swift */; };
+		E2D480011CC970F3009A7DC8 /* ListItemProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D47FFE1CC970F3009A7DC8 /* ListItemProtocol.swift */; };
 		E2D480031CC970FB009A7DC8 /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D480021CC970FB009A7DC8 /* ListTableViewController.swift */; };
 		E2D480051CC97104009A7DC8 /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D480041CC97104009A7DC8 /* ListItem.swift */; };
 /* End PBXBuildFile section */
@@ -160,9 +161,10 @@
 		E283C1F01CBF2D30000475DE /* ScanditCommunicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanditCommunicator.swift; sourceTree = "<group>"; };
 		E299718F1C75A14E00267230 /* RadialChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadialChart.swift; sourceTree = "<group>"; };
 		E299719C1C76C6E100267230 /* ServerCommunication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerCommunication.swift; sourceTree = "<group>"; };
+		E2A131101CDA8EA700912B70 /* ListProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListProtocol.swift; sourceTree = "<group>"; };
 		E2D47FFC1CC970F3009A7DC8 /* ListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListTableViewCell.swift; path = ../../../../../Hackathon/yojo/Yojo/Yojo/ListTableViewCell.swift; sourceTree = "<group>"; };
 		E2D47FFD1CC970F3009A7DC8 /* ListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ListTableViewCell.xib; path = ../../../../../Hackathon/yojo/Yojo/Yojo/ListTableViewCell.xib; sourceTree = "<group>"; };
-		E2D47FFE1CC970F3009A7DC8 /* AddItemProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddItemProtocol.swift; path = ../../../../../Hackathon/yojo/Yojo/Yojo/AddItemProtocol.swift; sourceTree = "<group>"; };
+		E2D47FFE1CC970F3009A7DC8 /* ListItemProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListItemProtocol.swift; path = ../../../../../Hackathon/yojo/Yojo/Yojo/ListItemProtocol.swift; sourceTree = "<group>"; };
 		E2D480021CC970FB009A7DC8 /* ListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListTableViewController.swift; path = ../../../../../Hackathon/yojo/Yojo/Yojo/ListTableViewController.swift; sourceTree = "<group>"; };
 		E2D480041CC97104009A7DC8 /* ListItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListItem.swift; path = ../../../../../Hackathon/yojo/Yojo/Yojo/ListItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -338,7 +340,8 @@
 				E2D480021CC970FB009A7DC8 /* ListTableViewController.swift */,
 				E2D47FFC1CC970F3009A7DC8 /* ListTableViewCell.swift */,
 				E2D47FFD1CC970F3009A7DC8 /* ListTableViewCell.xib */,
-				E2D47FFE1CC970F3009A7DC8 /* AddItemProtocol.swift */,
+				E2D47FFE1CC970F3009A7DC8 /* ListItemProtocol.swift */,
+				E2A131101CDA8EA700912B70 /* ListProtocol.swift */,
 				E22860A51CC97726009D3F80 /* ListTableStoryboard.storyboard */,
 				E22860AC1CCABEDE009D3F80 /* List.swift */,
 				E2139BC91CD8273000A9D43B /* CheckBoxButton.swift */,
@@ -549,9 +552,10 @@
 				E2D480031CC970FB009A7DC8 /* ListTableViewController.swift in Sources */,
 				E2D480051CC97104009A7DC8 /* ListItem.swift in Sources */,
 				E23D42651CADF69800D71162 /* ClarifaiCommunicator.swift in Sources */,
+				E2A131111CDA8EA700912B70 /* ListProtocol.swift in Sources */,
 				E299719D1C76C6E100267230 /* ServerCommunication.swift in Sources */,
 				E283C0491CBEEAFD000475DE /* MatDetailedViewImageCell.swift in Sources */,
-				E2D480011CC970F3009A7DC8 /* AddItemProtocol.swift in Sources */,
+				E2D480011CC970F3009A7DC8 /* ListItemProtocol.swift in Sources */,
 				E22860AA1CC9A2F3009D3F80 /* DictionaryExtension.swift in Sources */,
 				E24CD5771C75721A0025D4FD /* MatItemViewCell.swift in Sources */,
 				E23D42671CAF170100D71162 /* ClarifaiSession.swift in Sources */,

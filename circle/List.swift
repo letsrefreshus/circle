@@ -9,13 +9,13 @@
 
 import UIKit
 
-class List: NSObject {
+class List: NSObject, ListItemProtocol {
     var listName = String()
     var listId = NSNumber()
     var listDateAdded = String()
     var isMainList = Bool()
     var serverCommunicator = ServerCommunication.sharedInstance
-    var delegate : AddItemProtocol?
+    var delegate : ListProtocol?
     
     var listItems = [ListItem]()
     
@@ -39,7 +39,7 @@ class List: NSObject {
         if self.delegate != nil {
             self.delegate!.populateList(self.listItems)
         }
-        serverCommunicator.postDataToServer(ServerCommunication.ParametersForOperation.ListAddItem, headers: ServerCommunication.HeadersForOperation.ListAddItem, additionalParameters: ["list_id" : listId, "item_name":item.itemName, "isActive": true]) { (responseData) in
+        serverCommunicator.postDataToServer(ServerCommunication.ParametersForOperation.ListAddItem, headers: ServerCommunication.HeadersForOperation.ListAddItem, additionalParameters: ["list_id" : listId, "item_name":item.itemName, "isActive": false]) { (responseData) in
             print("Item added to the list on the server")
         }
     }
@@ -49,6 +49,23 @@ class List: NSObject {
             print("Item Deleted successfully")
         }
         self.listItems.removeAtIndex(index)
+    }
+    
+    // MARK:-DELEGATE FOR HANDLING ADDED ITEM
+    func addItemController(controller: ListTableViewCell, didAddItem: String) {
+        insertUserEnteredItemToList(ListItem(id:0, name:didAddItem, isActive: false))
+    }
+    
+    func sendEditsToItem(itemUpdated:ListItem) {
+        for i in 0 ..< listItems.count {
+            if listItems[i].itemId == itemUpdated.itemId {
+                 listItems[i] = itemUpdated
+                break
+            }
+        }
+        serverCommunicator.postDataToServer(ServerCommunication.ParametersForOperation.ListEditItem, headers: ServerCommunication.HeadersForOperation.ListEditItem, additionalParameters: ["list_id" : listId, "item_id" : itemUpdated.itemId, "item_name":itemUpdated.itemName, "is_active": itemUpdated.isActive]) { (responseData) in
+            print("Item edited in the list on the server")
+        }
     }
     
     func getListItemDataFromServer() {
@@ -61,15 +78,18 @@ class List: NSObject {
                 for item in anyObj as! Array<AnyObject> {
                     var id = NSNumber()
                     var name = String()
+                    var isActive = Bool()
                     for (itemType, itemName) in item as! NSMutableDictionary {
 //                        let data = ((itemName as? NSNumber) != nil) ? itemName.stringValue : itemName as! String
                         if(itemType as! String == "id") {
                             id = itemName as! NSNumber
                         } else if(itemType as! String == "item_name") {
                             name = itemName as! String
+                        } else if (itemType as! String == "isActive") {
+                            isActive = itemName as! Bool
                         }
                     }
-                    self.listItems.insert(ListItem(id:id, name:name), atIndex: (self.listItems.count - 1));
+                    self.listItems.insert(ListItem(id:id, name:name, isActive:isActive), atIndex: (self.listItems.count - 1));
                 }
                 if self.listItems.count > 0 && self.isMainList {
                     if self.delegate != nil {
