@@ -17,6 +17,9 @@ class MatItem: NSObject {
     var containerWeight = NSNumber()
     var numUnits = NSNumber()
     var units = String()
+    var xCoord = NSNumber()
+    var yCoord = NSNumber()
+    
     var itemWeightPercentage:NSNumber {
         get {
             if(itemMaxWeight == 0) {

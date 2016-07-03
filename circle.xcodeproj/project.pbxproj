@@ -39,6 +39,9 @@
 		E2D480011CC970F3009A7DC8 /* ListItemProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D47FFE1CC970F3009A7DC8 /* ListItemProtocol.swift */; };
 		E2D480031CC970FB009A7DC8 /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D480021CC970FB009A7DC8 /* ListTableViewController.swift */; };
 		E2D480051CC97104009A7DC8 /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D480041CC97104009A7DC8 /* ListItem.swift */; };
+		E2DD97221D11EA92001E6074 /* TestDataMatItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DD97211D11EA92001E6074 /* TestDataMatItems.swift */; };
+		E2DD97251D120C83001E6074 /* MatVisualizerViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2DD97241D120C83001E6074 /* MatVisualizerViewCell.xib */; };
+		E2DD97271D120C96001E6074 /* MatVisualizerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DD97261D120C96001E6074 /* MatVisualizerViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -167,6 +170,9 @@
 		E2D47FFE1CC970F3009A7DC8 /* ListItemProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListItemProtocol.swift; path = ../../../../../Hackathon/yojo/Yojo/Yojo/ListItemProtocol.swift; sourceTree = "<group>"; };
 		E2D480021CC970FB009A7DC8 /* ListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListTableViewController.swift; path = ../../../../../Hackathon/yojo/Yojo/Yojo/ListTableViewController.swift; sourceTree = "<group>"; };
 		E2D480041CC97104009A7DC8 /* ListItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListItem.swift; path = ../../../../../Hackathon/yojo/Yojo/Yojo/ListItem.swift; sourceTree = "<group>"; };
+		E2DD97211D11EA92001E6074 /* TestDataMatItems.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestDataMatItems.swift; sourceTree = "<group>"; };
+		E2DD97241D120C83001E6074 /* MatVisualizerViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MatVisualizerViewCell.xib; sourceTree = "<group>"; };
+		E2DD97261D120C96001E6074 /* MatVisualizerViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatVisualizerViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -247,9 +253,10 @@
 		E24CD5411C7571270025D4FD /* circle */ = {
 			isa = PBXGroup;
 			children = (
-				E2D47FFB1CC970CD009A7DC8 /* List */,
 				E299719E1C76C6E700267230 /* Networking */,
-				E24CD5741C7571E70025D4FD /* MatItemViewCell */,
+				E2D47FFB1CC970CD009A7DC8 /* List */,
+				E2DD97231D120AB1001E6074 /* MatVisualizer */,
+				E24CD5741C7571E70025D4FD /* MatItem */,
 				E24736AD1C87BCC700000A90 /* MatDetailedView */,
 				E29CEC391C759EA4009D2B35 /* Chart */,
 				E24CD5421C7571270025D4FD /* AppDelegate.swift */,
@@ -283,14 +290,15 @@
 			path = circleUITests;
 			sourceTree = "<group>";
 		};
-		E24CD5741C7571E70025D4FD /* MatItemViewCell */ = {
+		E24CD5741C7571E70025D4FD /* MatItem */ = {
 			isa = PBXGroup;
 			children = (
 				E213F8871C81085400C44A71 /* MatItem.swift */,
 				E24CD5751C75721A0025D4FD /* MatItemViewCell.swift */,
 				E24CD5761C75721A0025D4FD /* MatItemViewCell.xib */,
+				E2DD97211D11EA92001E6074 /* TestDataMatItems.swift */,
 			);
-			name = MatItemViewCell;
+			name = MatItem;
 			sourceTree = "<group>";
 		};
 		E283C1B81CBF1E4C000475DE /* Products */ = {
@@ -347,6 +355,15 @@
 				E2139BC91CD8273000A9D43B /* CheckBoxButton.swift */,
 			);
 			name = List;
+			sourceTree = "<group>";
+		};
+		E2DD97231D120AB1001E6074 /* MatVisualizer */ = {
+			isa = PBXGroup;
+			children = (
+				E2DD97241D120C83001E6074 /* MatVisualizerViewCell.xib */,
+				E2DD97261D120C96001E6074 /* MatVisualizerViewCell.swift */,
+			);
+			name = MatVisualizer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -522,6 +539,7 @@
 				E2D480001CC970F3009A7DC8 /* ListTableViewCell.xib in Resources */,
 				E24CD5481C7571270025D4FD /* Main.storyboard in Resources */,
 				E24736B91C87C6FC00000A90 /* Ubuntu-L.ttf in Resources */,
+				E2DD97251D120C83001E6074 /* MatVisualizerViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -551,6 +569,7 @@
 				E213F8881C81085400C44A71 /* MatItem.swift in Sources */,
 				E2D480031CC970FB009A7DC8 /* ListTableViewController.swift in Sources */,
 				E2D480051CC97104009A7DC8 /* ListItem.swift in Sources */,
+				E2DD97271D120C96001E6074 /* MatVisualizerViewCell.swift in Sources */,
 				E23D42651CADF69800D71162 /* ClarifaiCommunicator.swift in Sources */,
 				E2A131111CDA8EA700912B70 /* ListProtocol.swift in Sources */,
 				E299719D1C76C6E100267230 /* ServerCommunication.swift in Sources */,
@@ -559,6 +578,7 @@
 				E22860AA1CC9A2F3009D3F80 /* DictionaryExtension.swift in Sources */,
 				E24CD5771C75721A0025D4FD /* MatItemViewCell.swift in Sources */,
 				E23D42671CAF170100D71162 /* ClarifaiSession.swift in Sources */,
+				E2DD97221D11EA92001E6074 /* TestDataMatItems.swift in Sources */,
 				E29971901C75A14E00267230 /* RadialChart.swift in Sources */,
 				E24CD54B1C7571270025D4FD /* circle.xcdatamodeld in Sources */,
 				E24CD5431C7571270025D4FD /* AppDelegate.swift in Sources */,

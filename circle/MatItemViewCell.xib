@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="Ubuntu-L.ttf">
-            <string>Ubuntu-Light</string>
             <string>Ubuntu-Light</string>
             <string>Ubuntu-Light</string>
         </mutableArray>
@@ -40,24 +39,15 @@
                             <constraint firstItem="dsA-ID-HXM" firstAttribute="centerX" secondItem="gW5-jd-elp" secondAttribute="centerX" id="tTT-xt-QWI"/>
                         </constraints>
                     </view>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Skr-vL-Ily">
-                        <rect key="frame" x="33" y="149" width="48" height="22"/>
-                        <fontDescription key="fontDescription" name="Ubuntu-Light" family="Ubuntu" pointSize="19"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50oz" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ur-X1-S60">
-                        <rect key="frame" x="87" y="153" width="58" height="16"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="58" id="qFe-5P-zps"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" name="Ubuntu-Light" family="Ubuntu" pointSize="14"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xbx-Ez-Fr8">
                         <rect key="frame" x="8" y="8" width="136" height="21"/>
                         <fontDescription key="fontDescription" name="Ubuntu-Light" family="Ubuntu" pointSize="15"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Skr-vL-Ily">
+                        <rect key="frame" x="66" y="149" width="48" height="22"/>
+                        <fontDescription key="fontDescription" name="Ubuntu-Light" family="Ubuntu" pointSize="19"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -66,9 +56,7 @@
                     <constraint firstItem="gW5-jd-elp" firstAttribute="centerY" secondItem="tGe-6A-kPG" secondAttribute="centerY" constant="-1.75" id="CpS-GM-fyc"/>
                     <constraint firstItem="Skr-vL-Ily" firstAttribute="top" secondItem="gW5-jd-elp" secondAttribute="bottom" constant="6" id="F2I-rB-aIR"/>
                     <constraint firstItem="gW5-jd-elp" firstAttribute="centerX" secondItem="tGe-6A-kPG" secondAttribute="centerX" id="HI8-SH-4Rd"/>
-                    <constraint firstItem="6ur-X1-S60" firstAttribute="top" secondItem="gW5-jd-elp" secondAttribute="bottom" constant="10" id="SkX-C5-nKW"/>
-                    <constraint firstItem="Skr-vL-Ily" firstAttribute="centerX" secondItem="tGe-6A-kPG" secondAttribute="centerX" constant="-33" id="T6o-Qz-iku"/>
-                    <constraint firstItem="6ur-X1-S60" firstAttribute="leading" secondItem="Skr-vL-Ily" secondAttribute="trailing" constant="6" id="kbh-uu-aSl"/>
+                    <constraint firstItem="Skr-vL-Ily" firstAttribute="centerX" secondItem="tGe-6A-kPG" secondAttribute="centerX" id="T6o-Qz-iku"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -77,7 +65,6 @@
                 <outlet property="itemName" destination="Xbx-Ez-Fr8" id="mWz-WL-8UG"/>
                 <outlet property="percentageLabel" destination="Skr-vL-Ily" id="Bi2-Xp-0la"/>
                 <outlet property="radialChart" destination="gW5-jd-elp" id="VPS-fs-EeR"/>
-                <outlet property="weightLabel" destination="6ur-X1-S60" id="aaB-pd-oxa"/>
             </connections>
             <point key="canvasLocation" x="318" y="134"/>
         </tableViewCell>

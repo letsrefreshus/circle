@@ -29,6 +29,7 @@ class HomeViewController: UICollectionViewController,UICollectionViewDelegateFlo
         let navBarImageView = UIImageView(image: UIImage(named: "NavBarIcon"))
         navigationItem.titleView = navBarImageView
         self.collectionView?.registerNib(UINib(nibName: "MatItemViewCell", bundle: nil), forCellWithReuseIdentifier: "matDescriptorCell")
+        self.collectionView?.registerNib(UINib(nibName: "MatVisualizerViewCell", bundle: nil), forCellWithReuseIdentifier: "matVisualizerCell")
         
         refreshControl.addTarget(self, action: #selector(HomeViewController.refresh(_:)), forControlEvents: .ValueChanged)
         collectionView?.addSubview(refreshControl)
@@ -85,8 +86,16 @@ class HomeViewController: UICollectionViewController,UICollectionViewDelegateFlo
                 self.refreshControl.endRefreshing()
                 self.collectionView?.reloadData()
             } catch {
-                NSLog("Serialization to String failed on reading")
+                NSLog("Serialization to String failed on reading. Using Test data")
+                self.listItems = TestDataMatItems().testListItems
+                self.collectionView?.reloadData()
             }
+            let visualizerItem = MatItem()
+            visualizerItem.itemId = 0
+            visualizerItem.itemName = "matVisualizerCell"
+            var matVisualizerSection = Array<MatItem>()
+            matVisualizerSection.append(visualizerItem)
+            self.listItems.insert(matVisualizerSection, atIndex: 0)
         })
     }
 
@@ -119,15 +128,23 @@ class HomeViewController: UICollectionViewController,UICollectionViewDelegateFlo
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        return CGSize(width: collectionView.bounds.width/CGFloat(HomeViewController.MAX_ITEMS_IN_SECTION) - (2 * HomeViewController.CELL_INSET), height: 180)
+        return CGSize(width: collectionView.bounds.width/CGFloat(listItems[indexPath.section].count) - (2 * HomeViewController.CELL_INSET), height: 180)
     }
     
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("matDescriptorCell", forIndexPath: indexPath) as! MatItemViewCell
-        cell.cellData = listItems[indexPath.section][indexPath.row]
-        return cell
+        let cellType = listItems[indexPath.section][indexPath.row].itemName
+//        var cell = UICollectionViewCell()
+        if(cellType == "matVisualizerCell") {
+            let cell = collectionView.dequeueReusableCellWithReuseIdentifier(cellType, forIndexPath: indexPath) as! MatVisualizerViewCell
+            cell.drawItems(listItems)
+            return cell
+        } else {
+            let cell = collectionView.dequeueReusableCellWithReuseIdentifier("matDescriptorCell", forIndexPath: indexPath) as! MatItemViewCell
+            cell.cellData = listItems[indexPath.section][indexPath.row]
+            return cell
+        }
     }
-        
+    
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         
 //        self.navigationController?.pushViewController(vc, animated: true)

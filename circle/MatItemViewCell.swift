@@ -14,7 +14,7 @@ class MatItemViewCell: UICollectionViewCell {
     
     @IBOutlet weak var radialChart: RadialChart!
     @IBOutlet weak var percentageLabel: UILabel!
-    @IBOutlet weak var weightLabel: UILabel!
+//    @IBOutlet weak var weightLabel: UILabel!
     @IBOutlet weak var itemName: UILabel!
     @IBOutlet weak var itemIcon: UIImageView!
     
@@ -25,7 +25,7 @@ class MatItemViewCell: UICollectionViewCell {
             } else {
                 percentageLabel.text = String(format:"%.01f", cellData.itemWeightPercentage.floatValue) + "%"
             }
-            weightLabel.text = String(format:"%.01f", cellData.itemWeight.floatValue) + "oz";
+//            weightLabel.text = String(format:"%.01f", cellData.itemWeight.floatValue) + "oz";
             itemName.text = cellData.itemName
             if((UIImage(named: cellData.itemName)) != nil) {
                 itemIcon.image = UIImage(named: cellData.itemName)
